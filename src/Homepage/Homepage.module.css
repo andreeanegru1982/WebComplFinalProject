@@ -1,0 +1,17 @@
+.main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--bg-dark);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--text-normal);
+}

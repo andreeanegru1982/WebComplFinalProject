@@ -1,0 +1,263 @@
+{
+  "users": [
+    {
+      "email": "ana@test.com",
+      "password": "123456",
+      "firstName": "Ana",
+      "lastName": "Popescu",
+      "id": 1
+    },
+    {
+      "email": "mihai@test.com",
+      "password": "123456",
+      "firstName": "Mihai",
+      "lastName": "Ionescu",
+      "id": 2
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "year": 1960,
+      "genre": "Fiction",
+      "cover": "https://covers.openlibrary.org/b/id/8225261-L.jpg",
+      "userId": 1,
+      "ratings": [5, 4, 5],
+      "reviews": [
+        {
+          "id": 1,
+          "userId": 1,
+          "user": "Ana",
+          "comment": "Un roman excepțional.",
+          "date": "2024-10-01"
+        },
+        {
+          "id": 2,
+          "userId": 2,
+          "user": "Mihai",
+          "comment": "Mi-a plăcut foarte mult stilul.",
+          "date": "2025-01-15"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "author": "George Orwell",
+      "year": 1949,
+      "genre": "Dystopian",
+      "cover": "https://covers.openlibrary.org/b/id/7222246-L.jpg",
+      "userId": 2,
+      "ratings": [5, 5, 4, 5],
+      "reviews": [
+        {
+          "id": 1,
+          "userId": 2,
+          "user": "Mihai",
+          "comment": "Înfricoșător de actual.",
+          "date": "2025-02-20"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "year": 1813,
+      "genre": "Romance",
+      "cover": "https://covers.openlibrary.org/b/id/8231856-L.jpg",
+      "userId": 1,
+      "ratings": [5, 4, 5, 4],
+      "reviews": []
+    },
+    {
+      "id": 4,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "year": 1925,
+      "genre": "Classic",
+      "cover": "https://covers.openlibrary.org/b/id/7222161-L.jpg",
+      "userId": 2,
+      "ratings": [4, 5, 5],
+      "reviews": []
+    },
+    {
+      "id": 5,
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "year": 1951,
+      "genre": "Fiction",
+      "cover": "https://covers.openlibrary.org/b/id/8221251-L.jpg",
+      "userId": 1,
+      "ratings": [3, 4, 3],
+      "reviews": []
+    },
+    {
+      "id": 6,
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "year": 1932,
+      "genre": "Dystopian",
+      "cover": "https://covers.openlibrary.org/b/id/8235202-L.jpg",
+      "userId": 2,
+      "ratings": [5, 5, 4],
+      "reviews": []
+    },
+    {
+      "id": 7,
+      "title": "Moby-Dick",
+      "author": "Herman Melville",
+      "year": 1851,
+      "genre": "Adventure",
+      "cover": "https://covers.openlibrary.org/b/id/8100926-L.jpg",
+      "userId": 1,
+      "ratings": [3, 4],
+      "reviews": []
+    },
+    {
+      "id": 8,
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "year": 1937,
+      "genre": "Fantasy",
+      "cover": "https://covers.openlibrary.org/b/id/6979861-L.jpg",
+      "userId": 2,
+      "ratings": [5, 5, 5],
+      "reviews": []
+    },
+    {
+      "id": 9,
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "year": 1953,
+      "genre": "Science Fiction",
+      "cover": "https://covers.openlibrary.org/b/id/7984916-L.jpg",
+      "userId": 1,
+      "ratings": [4, 4, 5],
+      "reviews": []
+    },
+    {
+      "id": 10,
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë",
+      "year": 1847,
+      "genre": "Romance",
+      "cover": "https://covers.openlibrary.org/b/id/8225116-L.jpg",
+      "userId": 2,
+      "ratings": [5, 5, 4],
+      "reviews": []
+    },
+    {
+      "id": 11,
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "year": 1954,
+      "genre": "Fantasy",
+      "cover": "https://covers.openlibrary.org/b/id/8235109-L.jpg",
+      "userId": 1,
+      "ratings": [5, 5, 5],
+      "reviews": []
+    },
+    {
+      "id": 12,
+      "title": "Animal Farm",
+      "author": "George Orwell",
+      "year": 1945,
+      "genre": "Satire",
+      "cover": "https://covers.openlibrary.org/b/id/295577-L.jpg",
+      "userId": 2,
+      "ratings": [4, 4, 5],
+      "reviews": []
+    },
+    {
+      "id": 13,
+      "title": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde",
+      "year": 1890,
+      "genre": "Philosophical",
+      "cover": "https://covers.openlibrary.org/b/id/7222243-L.jpg",
+      "userId": 1,
+      "ratings": [4, 5, 5],
+      "reviews": []
+    },
+    {
+      "id": 14,
+      "title": "Dracula",
+      "author": "Bram Stoker",
+      "year": 1897,
+      "genre": "Horror",
+      "cover": "https://covers.openlibrary.org/b/id/7854716-L.jpg",
+      "userId": 2,
+      "ratings": [4, 4, 3],
+      "reviews": []
+    },
+    {
+      "id": 15,
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "year": 1866,
+      "genre": "Philosophical",
+      "cover": "https://covers.openlibrary.org/b/id/8232701-L.jpg",
+      "userId": 1,
+      "ratings": [5, 5, 5],
+      "reviews": []
+    },
+    {
+      "id": 16,
+      "title": "The Brothers Karamazov",
+      "author": "Fyodor Dostoevsky",
+      "year": 1880,
+      "genre": "Philosophical",
+      "cover": "https://covers.openlibrary.org/b/id/8231846-L.jpg",
+      "userId": 2,
+      "ratings": [5, 4, 5],
+      "reviews": []
+    },
+    {
+      "id": 17,
+      "title": "Wuthering Heights",
+      "author": "Emily Brontë",
+      "year": 1847,
+      "genre": "Gothic",
+      "cover": "https://covers.openlibrary.org/b/id/8225232-L.jpg",
+      "userId": 1,
+      "ratings": [3, 4],
+      "reviews": []
+    },
+    {
+      "id": 18,
+      "title": "Frankenstein",
+      "author": "Mary Shelley",
+      "year": 1818,
+      "genre": "Horror",
+      "cover": "https://covers.openlibrary.org/b/id/8225672-L.jpg",
+      "userId": 2,
+      "ratings": [4, 5],
+      "reviews": []
+    },
+    {
+      "id": 19,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "year": 1988,
+      "genre": "Adventure",
+      "cover": "https://covers.openlibrary.org/b/id/8091012-L.jpg",
+      "userId": 1,
+      "ratings": [4, 4, 4],
+      "reviews": []
+    },
+    {
+      "id": 20,
+      "title": "The Book Thief",
+      "author": "Markus Zusak",
+      "year": 2005,
+      "genre": "Historical Fiction",
+      "cover": "https://covers.openlibrary.org/b/id/8231841-L.jpg",
+      "userId": 2,
+      "ratings": [5, 5, 5],
+      "reviews": []
+    }
+  ]
+}
