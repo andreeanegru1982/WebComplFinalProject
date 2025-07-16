@@ -7,6 +7,7 @@ import { AuthContextProvider } from "./Features/Auth/AuthContext";
 import { ToastContainer } from "react-toastify";
 
 import "./App.css";
+import "./Forms.css"
 
 export function App() {
   return (

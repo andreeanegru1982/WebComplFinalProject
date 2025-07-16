@@ -1,0 +1,119 @@
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.brandForm {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 150px 1fr;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.brandForm label,
+.brandForm .label {
+  justify-self: end;
+  align-self: center;
+}
+
+.brandForm label.alignTop {
+  align-self: start;
+}
+
+.brandForm input:not([type="checkbox"]):not([type="radio"]):not([type="color"]),
+.brandForm textarea,
+.brandForm select {
+  justify-self: start;
+  padding: 0.5rem;
+  border: 1px solid var(--text-normal);
+  border-radius: 3px;
+  color: var(--text-normal);
+  font: inherit;
+}
+
+.brandForm input:focus-visible,
+.brandForm textarea:focus-visible,
+.brandForm select:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.brandForm fieldset {
+  display: grid;
+  justify-self: start;
+  grid-template-columns: 130px 1fr;
+  gap: 1rem;
+  min-width: 50%;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.fieldError,
+.secondColumn {
+  grid-column-start: 2;
+  justify-self: start;
+}
+
+.fieldError {
+  color: #c00;
+  margin: 0;
+}
+
+.btn {
+  align-self: end;
+  height: 2rem;
+  border: 1px solid #555;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: var(--text-inverted);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  height: 2.8rem;
+  margin: 1rem;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+  color: var(--text-inverted);
+}
+
+@media (max-width: 768px) {
+  .brandForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .brandForm label,
+  .brandForm .label {
+    justify-self: start !important;
+    align-self: start !important;
+    text-align: left;
+  }
+
+  .brandForm input,
+  .brandForm textarea,
+  .brandForm select {
+    width: 100%;
+  }
+
+  .btn {
+    align-self: stretch;
+  }
+
+  .secondColumn,
+  .fullWidth {
+    grid-column: auto;
+    justify-self: stretch;
+  }
+}
