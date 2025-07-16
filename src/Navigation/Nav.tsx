@@ -20,7 +20,7 @@ export function Nav() {
         </h1>
         <menu className={styles.mainMenu}>
           <li><NavLink to="/" className={({ isActive }) => isActive ? styles.active : ""}>Home</NavLink></li>
-          <li><NavLink to="/about" className={({ isActive }) => isActive ? styles.active : ""}>Fun fact</NavLink></li>
+          <li><NavLink to="/about" className={({ isActive }) => isActive ? styles.active : ""}>About</NavLink></li>
         
         {!user && (
           <>

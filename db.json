@@ -29,5 +29,162 @@
       "id": 4
     }
   ],
-  "books": []
+"books": [
+  {
+    "id": 1,
+    "title": "Little Women",
+    "author": "Louisa May Alcott",
+    "year": 1868,
+    "genre": "Fiction",
+    "cover": "https://covers.openlibrary.org/b/id/8224151-L.jpg",
+    "userId": 1,
+    "ratings": [5, 4, 5],
+    "reviews": [
+      {
+        "id": 1,
+        "userId": 2,
+        "user": "Sofia",
+        "comment": "Mi-a plăcut foarte mult relația dintre surori!",
+        "date": "2025-07-12"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "The Secret Garden",
+    "author": "Frances Hodgson Burnett",
+    "year": 1911,
+    "genre": "Children",
+    "cover": "https://covers.openlibrary.org/b/id/8281992-L.jpg",
+    "userId": 1,
+    "ratings": [4, 4],
+    "reviews": []
+  },
+  {
+    "id": 3,
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "year": 1847,
+    "genre": "Romance",
+    "cover": "https://covers.openlibrary.org/b/id/8225116-L.jpg",
+    "userId": 1,
+    "ratings": [5, 5, 5],
+    "reviews": []
+  },
+  {
+    "id": 4,
+    "title": "The Book Thief",
+    "author": "Markus Zusak",
+    "year": 2005,
+    "genre": "Historical Fiction",
+    "cover": "https://covers.openlibrary.org/b/id/8231841-L.jpg",
+    "userId": 2,
+    "ratings": [5, 5, 5],
+    "reviews": [
+      {
+        "id": 1,
+        "userId": 1,
+        "user": "Andreea",
+        "comment": "Poveste emoționantă, excelent scrisă!",
+        "date": "2025-07-14"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Coraline",
+    "author": "Neil Gaiman",
+    "year": 2002,
+    "genre": "Fantasy",
+    "cover": "https://covers.openlibrary.org/b/id/8370867-L.jpg",
+    "userId": 2,
+    "ratings": [4, 5],
+    "reviews": []
+  },
+  {
+    "id": 6,
+    "title": "Matilda",
+    "author": "Roald Dahl",
+    "year": 1988,
+    "genre": "Children",
+    "cover": "https://covers.openlibrary.org/b/id/8228691-L.jpg",
+    "userId": 2,
+    "ratings": [5, 5, 4],
+    "reviews": []
+  },
+  {
+    "id": 7,
+    "title": "Anne of Green Gables",
+    "author": "L. M. Montgomery",
+    "year": 1908,
+    "genre": "Fiction",
+    "cover": "https://covers.openlibrary.org/b/id/8234916-L.jpg",
+    "userId": 3,
+    "ratings": [4, 4, 5],
+    "reviews": []
+  },
+  {
+    "id": 8,
+    "title": "The Little Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "year": 1943,
+    "genre": "Philosophical",
+    "cover": "https://covers.openlibrary.org/b/id/8231859-L.jpg",
+    "userId": 3,
+    "ratings": [5, 5],
+    "reviews": [
+      {
+        "id": 1,
+        "userId": 4,
+        "user": "Călin",
+        "comment": "O lectură scurtă, dar profundă.",
+        "date": "2025-07-13"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Heidi",
+    "author": "Johanna Spyri",
+    "year": 1880,
+    "genre": "Children",
+    "cover": "https://covers.openlibrary.org/b/id/8281702-L.jpg",
+    "userId": 3,
+    "ratings": [4],
+    "reviews": []
+  },
+  {
+    "id": 10,
+    "title": "The Old Man and the Sea",
+    "author": "Ernest Hemingway",
+    "year": 1952,
+    "genre": "Classic",
+    "cover": "https://covers.openlibrary.org/b/id/8232301-L.jpg",
+    "userId": 4,
+    "ratings": [5, 5, 4],
+    "reviews": []
+  },
+  {
+    "id": 11,
+    "title": "Of Mice and Men",
+    "author": "John Steinbeck",
+    "year": 1937,
+    "genre": "Fiction",
+    "cover": "https://covers.openlibrary.org/b/id/8234801-L.jpg",
+    "userId": 4,
+    "ratings": [4, 4],
+    "reviews": []
+  },
+  {
+    "id": 12,
+    "title": "The Call of the Wild",
+    "author": "Jack London",
+    "year": 1903,
+    "genre": "Adventure",
+    "cover": "https://covers.openlibrary.org/b/id/8221426-L.jpg",
+    "userId": 4,
+    "ratings": [5, 4, 5],
+    "reviews": []
+  }
+]
 }

@@ -1,17 +1,19 @@
-.main {
-  padding: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-  color: var(--bg-dark);
+.bookList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.bookItem {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 5px;
 }
 
-p {
-  font-size: 1.6rem;
-  line-height: 1.5;
-  color: var(--text-normal);
+.rating {
+  color: gold;
+  font-size: 1.5rem;
 }

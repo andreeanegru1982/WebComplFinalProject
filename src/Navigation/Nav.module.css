@@ -43,7 +43,7 @@
 
 .active {
   color: var(--text-inverted);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .pushRight {
