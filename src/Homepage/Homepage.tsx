@@ -34,7 +34,7 @@ export function Homepage() {
       stars.push(
         <span className={styles.rating} key={i}>
           {i <= rating ? "★" : "☆"}
-        </span> // ★ = stea plină, ☆ = stea goală
+        </span> 
       );
     }
     return stars;

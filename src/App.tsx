@@ -5,6 +5,7 @@ import { Register } from "./Features/Auth";
 import { Login } from "./Features/Auth/Login";
 import { AuthContextProvider } from "./Features/Auth/AuthContext";
 import { ToastContainer } from "react-toastify";
+import { List } from "./Features/Books";
 
 import "./App.css";
 import "./Forms.css"
@@ -19,6 +20,7 @@ export function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={< Register/>} />
+          <Route path="books" element={< List/>} />
         </Routes>
       </main>
       <ToastContainer />

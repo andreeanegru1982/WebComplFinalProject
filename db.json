@@ -29,162 +29,327 @@
       "id": 4
     }
   ],
-"books": [
-  {
-    "id": 1,
-    "title": "Little Women",
-    "author": "Louisa May Alcott",
-    "year": 1868,
-    "genre": "Fiction",
-    "cover": "https://covers.openlibrary.org/b/id/8224151-L.jpg",
-    "userId": 1,
-    "ratings": [5, 4, 5],
-    "reviews": [
-      {
-        "id": 1,
-        "userId": 2,
-        "user": "Sofia",
-        "comment": "Mi-a plăcut foarte mult relația dintre surori!",
-        "date": "2025-07-12"
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "title": "The Secret Garden",
-    "author": "Frances Hodgson Burnett",
-    "year": 1911,
-    "genre": "Children",
-    "cover": "https://covers.openlibrary.org/b/id/8281992-L.jpg",
-    "userId": 1,
-    "ratings": [4, 4],
-    "reviews": []
-  },
-  {
-    "id": 3,
-    "title": "Jane Eyre",
-    "author": "Charlotte Brontë",
-    "year": 1847,
-    "genre": "Romance",
-    "cover": "https://covers.openlibrary.org/b/id/8225116-L.jpg",
-    "userId": 1,
-    "ratings": [5, 5, 5],
-    "reviews": []
-  },
-  {
-    "id": 4,
-    "title": "The Book Thief",
-    "author": "Markus Zusak",
-    "year": 2005,
-    "genre": "Historical Fiction",
-    "cover": "https://covers.openlibrary.org/b/id/8231841-L.jpg",
-    "userId": 2,
-    "ratings": [5, 5, 5],
-    "reviews": [
-      {
-        "id": 1,
-        "userId": 1,
-        "user": "Andreea",
-        "comment": "Poveste emoționantă, excelent scrisă!",
-        "date": "2025-07-14"
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "title": "Coraline",
-    "author": "Neil Gaiman",
-    "year": 2002,
-    "genre": "Fantasy",
-    "cover": "https://covers.openlibrary.org/b/id/8370867-L.jpg",
-    "userId": 2,
-    "ratings": [4, 5],
-    "reviews": []
-  },
-  {
-    "id": 6,
-    "title": "Matilda",
-    "author": "Roald Dahl",
-    "year": 1988,
-    "genre": "Children",
-    "cover": "https://covers.openlibrary.org/b/id/8228691-L.jpg",
-    "userId": 2,
-    "ratings": [5, 5, 4],
-    "reviews": []
-  },
-  {
-    "id": 7,
-    "title": "Anne of Green Gables",
-    "author": "L. M. Montgomery",
-    "year": 1908,
-    "genre": "Fiction",
-    "cover": "https://covers.openlibrary.org/b/id/8234916-L.jpg",
-    "userId": 3,
-    "ratings": [4, 4, 5],
-    "reviews": []
-  },
-  {
-    "id": 8,
-    "title": "The Little Prince",
-    "author": "Antoine de Saint-Exupéry",
-    "year": 1943,
-    "genre": "Philosophical",
-    "cover": "https://covers.openlibrary.org/b/id/8231859-L.jpg",
-    "userId": 3,
-    "ratings": [5, 5],
-    "reviews": [
-      {
-        "id": 1,
-        "userId": 4,
-        "user": "Călin",
-        "comment": "O lectură scurtă, dar profundă.",
-        "date": "2025-07-13"
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "title": "Heidi",
-    "author": "Johanna Spyri",
-    "year": 1880,
-    "genre": "Children",
-    "cover": "https://covers.openlibrary.org/b/id/8281702-L.jpg",
-    "userId": 3,
-    "ratings": [4],
-    "reviews": []
-  },
-  {
-    "id": 10,
-    "title": "The Old Man and the Sea",
-    "author": "Ernest Hemingway",
-    "year": 1952,
-    "genre": "Classic",
-    "cover": "https://covers.openlibrary.org/b/id/8232301-L.jpg",
-    "userId": 4,
-    "ratings": [5, 5, 4],
-    "reviews": []
-  },
-  {
-    "id": 11,
-    "title": "Of Mice and Men",
-    "author": "John Steinbeck",
-    "year": 1937,
-    "genre": "Fiction",
-    "cover": "https://covers.openlibrary.org/b/id/8234801-L.jpg",
-    "userId": 4,
-    "ratings": [4, 4],
-    "reviews": []
-  },
-  {
-    "id": 12,
-    "title": "The Call of the Wild",
-    "author": "Jack London",
-    "year": 1903,
-    "genre": "Adventure",
-    "cover": "https://covers.openlibrary.org/b/id/8221426-L.jpg",
-    "userId": 4,
-    "ratings": [5, 4, 5],
-    "reviews": []
-  }
-]
+  "books": [
+    {
+      "id": 1,
+      "title": "Little Women",
+      "author": "Louisa May Alcott",
+      "year": 1868,
+      "genre": "Fiction",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/13013/13012527-1.jpg",
+      "userId": 1,
+      "ratings": [5, 4, 5],
+      "reviews": [
+        {
+          "id": 1,
+          "userId": 2,
+          "user": "Sofia",
+          "comment": "Mi-a plăcut foarte mult relația dintre surori!",
+          "date": "2025-07-12"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "The Secret Garden",
+      "author": "Frances Hodgson Burnett",
+      "year": 1911,
+      "genre": "Children",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/13277/13276622-1.jpg",
+      "userId": 1,
+      "ratings": [4, 4],
+      "reviews": []
+    },
+    {
+      "id": 3,
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë",
+      "year": 1847,
+      "genre": "Romance",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/28103/28102767-1.jpg",
+      "userId": 1,
+      "ratings": [5, 5, 5],
+      "reviews": []
+    },
+    {
+      "id": 4,
+      "title": "The Book Thief",
+      "author": "Markus Zusak",
+      "year": 2005,
+      "genre": "Historical Fiction",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/14946/14945815-1.jpg",
+      "userId": 2,
+      "ratings": [5, 5, 5],
+      "reviews": [
+        {
+          "id": 1,
+          "userId": 1,
+          "user": "Andreea",
+          "comment": "Poveste emoționantă, excelent scrisă!",
+          "date": "2025-07-14"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Coraline",
+      "author": "Neil Gaiman",
+      "year": 2002,
+      "genre": "Fantasy",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/42051/42050708-1.jpg",
+      "userId": 2,
+      "ratings": [4, 5],
+      "reviews": []
+    },
+    {
+      "id": 6,
+      "title": "Matilda",
+      "author": "Roald Dahl",
+      "year": 1988,
+      "genre": "Children",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/42310/42309351-1.jpg",
+      "userId": 2,
+      "ratings": [5, 5, 4],
+      "reviews": []
+    },
+    {
+      "id": 7,
+      "title": "Anne of Green Gables",
+      "author": "L. M. Montgomery",
+      "year": 1908,
+      "genre": "Fiction",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/25081/25080902-1.jpg",
+      "userId": 3,
+      "ratings": [4, 4, 5],
+      "reviews": []
+    },
+    {
+      "id": 8,
+      "title": "The Little Prince",
+      "author": "Antoine de Saint-Exupéry",
+      "year": 1943,
+      "genre": "Philosophical",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/35684/35683375-1.jpg",
+      "userId": 3,
+      "ratings": [5, 5],
+      "reviews": [
+        {
+          "id": 1,
+          "userId": 4,
+          "user": "Călin",
+          "comment": "O lectură scurtă, dar profundă.",
+          "date": "2025-07-13"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Heidi",
+      "author": "Johanna Spyri",
+      "year": 1880,
+      "genre": "Children",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/24620/24619791-1.jpg",
+      "userId": 3,
+      "ratings": [4],
+      "reviews": []
+    },
+    {
+      "id": 10,
+      "title": "The Old Man and the Sea",
+      "author": "Ernest Hemingway",
+      "year": 1952,
+      "genre": "Classic",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/34651/34650756-1.jpg",
+      "userId": 4,
+      "ratings": [5, 5, 4],
+      "reviews": []
+    },
+    {
+      "id": 11,
+      "title": "Of Mice and Men",
+      "author": "John Steinbeck",
+      "year": 1937,
+      "genre": "Fiction",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/1020/1019457-1.jpg",
+      "userId": 4,
+      "ratings": [4, 4],
+      "reviews": []
+    },
+    {
+      "id": 12,
+      "title": "The Call of the Wild",
+      "author": "Jack London",
+      "year": 1903,
+      "genre": "Adventure",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/1022/1021551-1.jpg",
+      "userId": 4,
+      "ratings": [5, 4, 5],
+      "reviews": []
+    },
+    {
+      "id": 13,
+      "title": "Dracula",
+      "author": "Bram Stoker",
+      "year": 1897,
+      "genre": "Horror",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/28227/28226205-1.jpg",
+      "userId": 1,
+      "ratings": [5, 5, 4],
+      "reviews": []
+    },
+    {
+      "id": 14,
+      "title": "Frankenstein",
+      "author": "Mary Shelley",
+      "year": 1818,
+      "genre": "Horror",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/11676/11675493-1.jpg",
+      "userId": 2,
+      "ratings": [4, 5, 5],
+      "reviews": []
+    },
+    {
+      "id": 15,
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "year": 1937,
+      "genre": "Fantasy",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/1199/1198373-1.jpg",
+      "userId": 3,
+      "ratings": [5, 5, 5],
+      "reviews": []
+    },
+    {
+      "id": 16,
+      "title": "The Shining",
+      "author": "Stephen King",
+      "year": 1977,
+      "genre": "Horror",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/1208/1207257-1.jpg",
+      "userId": 4,
+      "ratings": [5, 4, 5],
+      "reviews": []
+    },
+    {
+      "id": 17,
+      "title": "A Tale of Two Cities",
+      "author": "Charles Dickens",
+      "year": 1859,
+      "genre": "Classic",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/13882/13881427-1.jpg",
+      "userId": 1,
+      "ratings": [4, 4, 5],
+      "reviews": []
+    },
+    {
+      "id": 18,
+      "title": "The Call of Cthulhu",
+      "author": "H.P. Lovecraft",
+      "year": 1928,
+      "genre": "Horror",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/27300/27299363-1.jpg",
+      "userId": 2,
+      "ratings": [5, 5, 4],
+      "reviews": []
+    },
+    {
+      "id": 19,
+      "title": "The Chronicles of Narnia",
+      "author": "C.S. Lewis",
+      "year": 1956,
+      "genre": "Fantasy",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/10957/10956592-1.jpg",
+      "userId": 3,
+      "ratings": [5, 5, 5],
+      "reviews": []
+    },
+    {
+      "id": 20,
+      "title": "Wuthering Heights",
+      "author": "Emily Brontë",
+      "year": 1847,
+      "genre": "Classic",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/11005/11004320-1.jpg",
+      "userId": 4,
+      "ratings": [4, 5, 5],
+      "reviews": []
+    },
+    {
+      "id": 21,
+      "title": "It",
+      "author": "Stephen King",
+      "year": 1986,
+      "genre": "Horror",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/11052/11051147-1.jpg",
+      "userId": 1,
+      "ratings": [5, 5, 5],
+      "reviews": []
+    },
+    {
+      "id": 22,
+      "title": "The Name of the Wind",
+      "author": "Patrick Rothfuss",
+      "year": 2007,
+      "genre": "Fantasy",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/15362/15361932-1.jpg",
+      "userId": 2,
+      "ratings": [5, 5, 5],
+      "reviews": []
+    },
+    {
+      "id": 23,
+      "title": "Dr. Jekyll and Mr. Hyde",
+      "author": "Robert Louis Stevenson",
+      "year": 1886,
+      "genre": "Horror",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/11044/11043439-1.jpg",
+      "userId": 3,
+      "ratings": [4, 4, 4],
+      "reviews": []
+    },
+    {
+      "id": 24,
+      "title": "The Count of Monte Cristo",
+      "author": "Alexandre Dumas",
+      "year": 1844,
+      "genre": "Classic",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/35280/35279573-1.jpg",
+      "userId": 4,
+      "ratings": [5, 5, 5],
+      "reviews": []
+    },
+    {
+      "id": 25,
+      "title": "Anna Karenina",
+      "author": "Lev Tolstoi",
+      "year": 1877,
+      "genre": "Classic",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/28866/28865011-1.jpg",
+      "userId": 1,
+      "ratings": [5, 5, 4],
+      "reviews": []
+    },
+    {
+      "id": 26,
+      "title": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde",
+      "year": 1890,
+      "genre": "Classic",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/31472/31471223-1.jpg",
+      "userId": 2,
+      "ratings": [4, 5, 4],
+      "reviews": []
+    },
+    {
+      "id": 27,
+      "title": "Pet Sematary",
+      "author": "Stephen King",
+      "year": 1983,
+      "genre": "Horror",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/15368/15367717-1.jpg",
+      "userId": 3,
+      "ratings": [5, 5, 4],
+      "reviews": []
+    }
+  ]
 }

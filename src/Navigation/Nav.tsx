@@ -21,6 +21,7 @@ export function Nav() {
         <menu className={styles.mainMenu}>
           <li><NavLink to="/" className={({ isActive }) => isActive ? styles.active : ""}>Home</NavLink></li>
           <li><NavLink to="/about" className={({ isActive }) => isActive ? styles.active : ""}>About</NavLink></li>
+          <li><NavLink to="books" className={({ isActive }) => isActive ? styles.active : ""}>Books</NavLink></li>
         
         {!user && (
           <>
