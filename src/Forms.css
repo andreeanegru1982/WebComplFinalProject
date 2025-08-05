@@ -70,16 +70,23 @@
 }
 
 .btn {
-  align-self: end;
-  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font: inherit;
+  padding: 0;            
+  line-height: normal;   
   border: 1px solid #555;
+  height: 2.8rem;
+  width: 60px;
   border-radius: 5px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   color: var(--text-inverted);
   background-color: var(--primary-color);
   cursor: pointer;
-  height: 2.8rem;
   margin: 1rem;
+  text-decoration: none;
 }
 
 .btn:hover {
