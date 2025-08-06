@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import type { Book } from "./types";
 
 import styles from "./Homepage.module.css";
@@ -34,7 +35,7 @@ export function Homepage() {
       stars.push(
         <span className={styles.rating} key={i}>
           {i <= rating ? "★" : "☆"}
-        </span> 
+        </span>
       );
     }
     return stars;
@@ -42,28 +43,51 @@ export function Homepage() {
 
   return (
     <main className={styles.main}>
-      <h1>Welcome to the Books site!</h1>
-      <h2>Bookes rated 5 stars</h2>
+      <section className={styles.hero}>
+        <h1>Discover and share your favorite books</h1>
+        <p>
+          This is an app dedicated to book lovers. Add, edit, rate and review
+          the books you love.
+        </p>
+        <div className={styles.ctaButtons}>
+          <Link to="/books" className="btn btnWide">
+            Explore
+          </Link>
+          <Link to="/books/add" className="btn btnWide">
+            Add another book
+          </Link>
+        </div>
+      </section>
 
-      {!topBooks ? (
-        <p>Loading books...</p>
-      ) : topBooks.length === 0 ? (
-        <p>No books available.</p>
-      ) : (
-        <ul className={styles.bookList}>
-          {topBooks.map((book) => {
-            const avgRating = Math.round(
-              book.ratings.reduce((a, b) => a + b, 0) / book.ratings.length
-            );
-            return (
-              <li key={book.id} className={styles.bookItem}>
-                <strong>{book.title}</strong> by {book.author}{" "}
-                {renderStars(avgRating)}
-              </li>
-            );
-          })}
-        </ul>
-      )}
+      <section className={styles.topBooks}>
+        <h2>Books rated 5 stars</h2>
+        {!topBooks ? (
+          <p>Loading...</p>
+        ) : topBooks.length === 0 ? (
+          <p>There are no books rated 5 stars yet.</p>
+        ) : (
+          <ul className={styles.bookList}>
+            {topBooks.map((book) => {
+              const avgRating = Math.round(
+                book.ratings.reduce((a, b) => a + b, 0) / book.ratings.length
+              );
+              return (
+                <li key={book.id} className={styles.bookItem}>
+                  <img
+                    src={book.cover}
+                    alt={book.title}
+                    className={styles.cover}
+                  />
+                  <div>
+                    <strong>{book.title}</strong> de {book.author}
+                    <div>{renderStars(avgRating)}</div>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </section>
     </main>
   );
 }

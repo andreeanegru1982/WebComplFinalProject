@@ -1,6 +1,35 @@
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+
+  & h1 {
+    font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  }
+
+  & p {
+     font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 1rem;
+  }
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.topBooks {
+  margin-top: 2rem;
+}
+
 .bookList {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   gap: 2rem;
   list-style: none;
@@ -8,12 +37,28 @@
 }
 
 .bookItem {
-  border-bottom: 1px solid #ccc;
+  flex: 1 1 200px;
+  border: 1px solid #ccc;
   padding: 1rem;
+  border-radius: 7px;
+  background-color: #fff;
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+}
+
+.bookItem strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.cover {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 0.5rem;
   border-radius: 5px;
 }
 
 .rating {
   color: gold;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }

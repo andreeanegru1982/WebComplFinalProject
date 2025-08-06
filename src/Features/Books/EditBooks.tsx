@@ -226,7 +226,7 @@ export function EditBooks() {
         onChange={handleInputChange}
       />
 
-      <button type="submit" className="btn btnFormAction btnCenter">
+      <button type="submit" className="btn btnCenter btnWide">
         Update book
       </button>
     </form>

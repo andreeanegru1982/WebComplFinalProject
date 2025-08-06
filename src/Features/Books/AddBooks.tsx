@@ -198,7 +198,7 @@ export function AddBooks() {
         onChange={handleInputChange}
       />
 
-      <button type="submit" className="btn btnFormAction btnCenter">
+      <button type="submit" className="btn btnCenter btnWide">
         Add book
       </button>
     </form>
