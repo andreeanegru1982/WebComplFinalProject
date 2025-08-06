@@ -7,6 +7,7 @@ import { AuthContextProvider } from "./Features/Auth/AuthContext";
 import { ToastContainer } from "react-toastify";
 import { List } from "./Features/Books";
 import { Details } from "./Features/Books/Detaisl";
+import { AddBooks } from "./Features/Books/AddBooks";
 
 import "./App.css";
 import "./Forms.css"
@@ -23,6 +24,7 @@ export function App() {
           <Route path="register" element={< Register/>} />
           <Route path="books" element={< List/>} />
           <Route path="books/:id" element={< Details/>} />
+          <Route path="books/add" element={< AddBooks/>} />
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </main>

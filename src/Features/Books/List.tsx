@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import type { Book } from "./types";
 import { BookItem } from "./Item";
 import { Pagination } from "./Pagination";
-import { useSearchParams } from "react-router-dom";
+import { Link, Links, useSearchParams } from "react-router-dom";
+import clsx from "clsx";
+import { HiPlusCircle } from "react-icons/hi2";
+import { useAuthContext } from "../Auth/AuthContext";
 
 import styles from "./Books.module.css";
 
@@ -12,8 +15,9 @@ const itemsPerPage = 10;
 export function List() {
   const [books, setBooks] = useState<null | Book[]>(null);
   const [totalCount, setTotalCount] = useState(0);
-  const [ params ] = useSearchParams();
-  const page = Number(params.get('page'));
+  const [params] = useSearchParams();
+  const page = Number(params.get("page"));
+  const { accessToken } = useAuthContext();
 
   useEffect(() => {
     async function getBooks() {
@@ -29,6 +33,8 @@ export function List() {
     getBooks();
   }, [page]);
 
+  function handleAddBook() {}
+
   return (
     <section className={styles.contentBox}>
       <h1 className="fullWidth">Books</h1>
@@ -36,6 +42,11 @@ export function List() {
       {books && books.map((book) => <BookItem key={book.id} book={book} />)}
       {totalCount && (
         <Pagination itemsPerPage={itemsPerPage} totalCount={totalCount} />
+      )}
+      {books && accessToken && (
+        <Link to="add" className={clsx(styles.addBookBtn)}>
+          <HiPlusCircle />
+        </Link>
       )}
     </section>
   );

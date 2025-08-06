@@ -46,6 +46,11 @@
   outline-offset: 2px;
 }
 
+.btnCenter {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
 .brandForm fieldset {
   display: grid;
   justify-self: start;
@@ -92,6 +97,14 @@
 .btn:hover {
   background-color: var(--hover-color);
   color: var(--text-inverted);
+}
+
+.btnFormAction {
+  padding: 0.5rem 1.5rem;
+  width: auto;
+  height: auto;
+  font-size: 1rem;
+  min-width: 100px;
 }
 
 @media (max-width: 768px) {
