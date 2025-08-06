@@ -158,7 +158,6 @@
       "cover": "https://cdn4.libris.ro/img/pozeprod/35684/35683375-1.jpg",
       "userId": 3,
       "ratings": [
-        5,
         5
       ],
       "reviews": [
@@ -168,6 +167,13 @@
           "user": "Călin",
           "comment": "O lectură scurtă, dar profundă.",
           "date": "2025-07-13"
+        },
+        {
+          "id": 2,
+          "userId": 3,
+          "user": "Sara",
+          "comment": "Un copil pe o planetă minusculă învață un adult obosit ce înseamnă prietenia, iubirea și lucrurile cu adevărat importante. ",
+          "date": "2025-08-06"
         }
       ]
     },
@@ -463,8 +469,38 @@
       "ratings": [
         5
       ],
-      "reviews": [],
+      "reviews": [
+        "Citesc Mândrie și Prejudecată ori de câte ori am nevoie de un boost moral sau de o porție de sarcasm britanic cu aristocrați încruntați. Elizabeth Bennet e exact genul de prietenă pe care ți-ai dori-o: deșteaptă, directă și cu replici tăioase. Iar Darcy? Ei bine… la început vrei să-l lovești cu cartea, apoi vrei să te căsătorești cu el. Clasic Austen!",
+        {
+          "id": 2,
+          "userId": 1,
+          "user": "Andreea",
+          "comment": "Citesc Mândrie și Prejudecată ori de câte ori am nevoie de un boost moral sau de o porție de sarcasm britanic cu aristocrați încruntați. Elizabeth Bennet e exact genul de prietenă pe care ți-ai dori-o: deșteaptă, directă și cu replici tăioase. Iar Darcy? Ei bine… la început vrei să-l lovești cu cartea, apoi vrei să te căsătorești cu el. Clasic Austen!",
+          "date": "2025-08-06"
+        }
+      ],
       "id": 28
+    },
+    {
+      "title": "Ion",
+      "author": "Liviu Rebreanu",
+      "year": 1920,
+      "genre": "roman realist",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/37366/37365608-1.jpg",
+      "userId": 1,
+      "ratings": [
+        5
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "userId": 1,
+          "user": "Andreea",
+          "comment": "O carte puternică, care surprinde lupta omului cu sărăcia și dorința de avere. Personajele sunt vii și bine conturate.",
+          "date": "2025-08-06"
+        }
+      ],
+      "id": 29
     }
   ]
 }

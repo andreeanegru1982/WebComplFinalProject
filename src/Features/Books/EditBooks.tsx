@@ -1,9 +1,10 @@
 import { z } from "zod/v4";
 import { validateForm, type ValidationErrors } from "../../utils/validations";
-import { useState } from "react";
-import { useAuthContext } from "../Auth/AuthContext";
-import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useEffect, useState } from "react";
+import { useAuthContext } from "../Auth/AuthContext";
+import { useNavigate, useParams } from "react-router-dom";
+import type { Book } from "./types";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -34,8 +35,8 @@ const initialDefaultValues = {
   review: "",
 };
 
-export function AddBooks() {
-  
+export function EditBooks() {
+  const [book, setBook] = useState<null | Book>(null);
   const [errors, setErrors] = useState<null | ValidationErrors<
     typeof validationSchema
   >>(null);
@@ -43,6 +44,29 @@ export function AddBooks() {
 
   const { user, accessToken } = useAuthContext();
   const navigate = useNavigate();
+  const { id } = useParams();
+
+  useEffect(() => {
+    fetch(`${apiUrl}/books/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setBook(data);
+        setDefaultValues({
+          title: data.title || "",
+          author: data.author || "",
+          year: String(data.year) || "",
+          genre: data.genre || "",
+          cover: data.cover || "",
+          rating:
+            String(
+              Array.isArray(data.ratings) ? data.ratings[0] : data.rating || ""
+            ) || "",
+          review: Array.isArray(data.reviews)
+            ? data.reviews[0] || ""
+            : data.review || "",
+        });
+      });
+  }, [id]);
 
   function handleInputChange(
     e: React.ChangeEvent<
@@ -61,7 +85,7 @@ export function AddBooks() {
     setErrors(newErrors);
   }
 
-  async function handleAddBook(formData: FormData) {
+  async function handleUpdateBook(formData: FormData) {
     const rawValues: Record<string, FormDataEntryValue | FormDataEntryValue[]> =
       Object.fromEntries(formData.entries());
 
@@ -75,16 +99,15 @@ export function AddBooks() {
     setErrors(null);
     setDefaultValues(initialDefaultValues);
 
-   const newReview = rawValues.review
-  ? [{
-      id: 1, // sau uuid
+    const newReview = rawValues.review
+  ? {
+      id: book!.reviews.length + 1, // sau uuid
       userId: user!.id,
       user: user!.firstName,
       comment: String(rawValues.review),
       date: new Date().toISOString().slice(0, 10),
-    }]
-  : [];
-
+    }
+  : null;
 
     const newBookData = {
       title: String(rawValues.title),
@@ -94,11 +117,11 @@ export function AddBooks() {
       cover: String(rawValues.cover),
       userId: Number(user!.id),
       ratings: [Number(rawValues.rating)],
-      reviews: newReview,
+      reviews: newReview ? [...book!.reviews, newReview] : book!.reviews,
     };
 
-    await fetch(`${apiUrl}/books`, {
-      method: "POST",
+    await fetch(`${apiUrl}/books/${id}`, {
+      method: "PATCH",
       body: JSON.stringify(newBookData),
       headers: {
         "Content-Type": "application/json",
@@ -107,20 +130,25 @@ export function AddBooks() {
     });
 
     toast.success(
-      `You have successfully added a new book: "${newBookData.title}" by "${newBookData.author}"`
+      `You have successfully updated the book: "${newBookData.title}" by "${newBookData.author}"`
     );
-    navigate("/books");
+    navigate(`/books/${id}`);
   }
+
+  if (!book) {
+    return <p>Loading book details...</p>;
+  }
+
   return (
     <form
       className="brandForm"
       onSubmit={(e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
-        handleAddBook(formData);
+        handleUpdateBook(formData);
       }}
     >
-      <h1 className="fullWidth">Add Books</h1>
+      <h1 className="fullWidth">Edit "{book.title}"</h1>
 
       <label htmlFor="title">Title</label>
       <input
@@ -199,7 +227,7 @@ export function AddBooks() {
       />
 
       <button type="submit" className="btn btnFormAction btnCenter">
-        Add book
+        Update book
       </button>
     </form>
   );

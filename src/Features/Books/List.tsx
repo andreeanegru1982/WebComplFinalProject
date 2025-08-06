@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { Book } from "./types";
 import { BookItem } from "./Item";
 import { Pagination } from "./Pagination";
-import { Link, Links, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import clsx from "clsx";
 import { HiPlusCircle } from "react-icons/hi2";
 import { useAuthContext } from "../Auth/AuthContext";
@@ -33,7 +33,6 @@ export function List() {
     getBooks();
   }, [page]);
 
-  function handleAddBook() {}
 
   return (
     <section className={styles.contentBox}>

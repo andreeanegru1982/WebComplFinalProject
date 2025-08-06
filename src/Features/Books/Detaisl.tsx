@@ -136,8 +136,8 @@ export function Details() {
         <h2>Reviews:</h2>
         {book.reviews.length === 0 && <p>No reviews yet.</p>}
         <ul>
-          {book.reviews.map((review) => (
-            <li key={review.id}>
+          {book.reviews.map((review, index) => (
+            <li key={index}>
               <p>
                 <strong>{review.user}:</strong> {review.comment}
               </p>
