@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { Book } from "./types";
+import type { Book } from "../../utils/types";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import Modal from "react-modal";
 import { useAuthContext } from "../Auth/AuthContext";

@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 import { useAuthContext } from "../Auth/AuthContext";
 import { useNavigate, useParams } from "react-router-dom";
-import type { Book } from "./types";
+import type { Book } from "../../utils/types";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -47,10 +47,17 @@ export function EditBooks() {
   const { id } = useParams();
 
   useEffect(() => {
+    if (!user) return;
+
     fetch(`${apiUrl}/books/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setBook(data);
+
+        const currentUserReview = Array.isArray(data.reviews)
+          ? data.reviews.find((r: any) => r.userId === user.id)
+          : null;
+
         setDefaultValues({
           title: data.title || "",
           author: data.author || "",
@@ -61,18 +68,24 @@ export function EditBooks() {
             String(
               Array.isArray(data.ratings) ? data.ratings[0] : data.rating || ""
             ) || "",
-          review: Array.isArray(data.reviews)
-            ? data.reviews[0] || ""
-            : data.review || "",
+          review: currentUserReview ? currentUserReview.comment : "",
         });
       });
-  }, [id]);
+  }, [id, user]);
 
   function handleInputChange(
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) {
+    
+    const { name, value } = e.target;
+
+    setDefaultValues((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
     if (!errors) return;
 
     const form = e.currentTarget.form;
@@ -99,15 +112,32 @@ export function EditBooks() {
     setErrors(null);
     setDefaultValues(initialDefaultValues);
 
-    const newReview = rawValues.review
-  ? {
-      id: book!.reviews.length + 1, // sau uuid
-      userId: user!.id,
-      user: user!.firstName,
-      comment: String(rawValues.review),
-      date: new Date().toISOString().slice(0, 10),
+    const rawReview = rawValues.review ? String(rawValues.review).trim() : "";
+    let updatedReviews = [...book!.reviews];
+
+    const existingReviewIndex = updatedReviews.findIndex(
+      (r) => r.userId === user!.id
+    );
+    const existingReview =
+      existingReviewIndex !== -1 ? updatedReviews[existingReviewIndex] : null;
+
+    if (rawReview === "" && existingReview) {
+      updatedReviews.splice(existingReviewIndex, 1);
+    } else if (rawReview && rawReview !== existingReview?.comment) {
+      const newReview = {
+        id: existingReview?.id || updatedReviews.length + 1,
+        userId: user!.id,
+        user: user!.firstName,
+        comment: rawReview,
+        date: new Date().toISOString().slice(0, 10),
+      };
+
+      if (existingReviewIndex !== -1) {
+        updatedReviews[existingReviewIndex] = newReview;
+      } else {
+        updatedReviews.push(newReview);
+      }
     }
-  : null;
 
     const newBookData = {
       title: String(rawValues.title),
@@ -117,7 +147,7 @@ export function EditBooks() {
       cover: String(rawValues.cover),
       userId: Number(user!.id),
       ratings: [Number(rawValues.rating)],
-      reviews: newReview ? [...book!.reviews, newReview] : book!.reviews,
+      reviews: updatedReviews,
     };
 
     await fetch(`${apiUrl}/books/${id}`, {
@@ -218,13 +248,30 @@ export function EditBooks() {
         ))}
         {errors?.rating && <p className="fieldError">{errors.rating[0]}</p>}
       </fieldset>
+
       <label htmlFor="review">Review</label>
       <textarea
         id="review"
         name="review"
-        defaultValue={defaultValues.review}
+        value={defaultValues.review}
         onChange={handleInputChange}
       />
+      {defaultValues.review && (
+        <button
+          type="button"
+          onClick={() => {
+            if (!book) return;
+            const filteredReviews = book.reviews.filter(
+              (r) => r.userId !== user!.id
+            );
+            setBook({ ...book, reviews: filteredReviews });
+            setDefaultValues({ ...defaultValues, review: "" });
+          }}
+          className="btn btnWide"
+        >
+          Delete Review
+        </button>
+      )}
 
       <button type="submit" className="btn btnCenter btnWide">
         Update book

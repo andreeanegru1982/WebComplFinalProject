@@ -9,6 +9,7 @@ import { List } from "./Features/Books";
 import { Details } from "./Features/Books/Detaisl";
 import { AddBooks } from "./Features/Books/AddBooks";
 import { EditBooks } from "./Features/Books/EditBooks";
+import { About } from "./About/About";
 
 import "./App.css";
 import "./Forms.css"
@@ -27,6 +28,7 @@ export function App() {
           <Route path="books/:id" element={< Details/>} />
           <Route path="books/:id/edit" element={< EditBooks/>} />
           <Route path="books/add" element={< AddBooks/>} />
+          <Route path="about" element={< About/>} />
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </main>

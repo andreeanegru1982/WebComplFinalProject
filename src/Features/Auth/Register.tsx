@@ -88,9 +88,15 @@ export function Register() {
     );
   }
 
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    handleRegister(formData);
+  }
+
   return (
     <div className="formWrapper">
-      <form action={handleRegister} className="brandForm" noValidate>
+      <form onSubmit={onSubmit} className="brandForm" noValidate>
         <h1 className="fullWidth">Register</h1>
 
         <label htmlFor="email">Email</label>

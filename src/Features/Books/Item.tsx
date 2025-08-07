@@ -1,4 +1,4 @@
-import type { Book } from "./types";
+import type { Book } from "../../utils/types";
 
 import styles from './Books.module.css';
 import { Link } from "react-router-dom";

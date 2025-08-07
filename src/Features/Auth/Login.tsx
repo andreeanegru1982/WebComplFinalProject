@@ -71,9 +71,15 @@ export function Login() {
     toast.success("You have been logged in successfully!");
   }
 
+   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    handleLogin(formData);
+  }
+
   return (
     <div className="formWrapper">
-      <form action={handleLogin} className="brandForm" noValidate>
+      <form onSubmit={onSubmit} className="brandForm" noValidate>
         <h1 className="fullWidth">Login</h1>
 
         <label htmlFor="email">Email</label>

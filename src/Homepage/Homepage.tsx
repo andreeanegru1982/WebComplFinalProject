@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import type { Book } from "./types";
+import type { Book } from "../utils/types";
 
 import styles from "./Homepage.module.css";
 

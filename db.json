@@ -470,7 +470,6 @@
         5
       ],
       "reviews": [
-        "Citesc Mândrie și Prejudecată ori de câte ori am nevoie de un boost moral sau de o porție de sarcasm britanic cu aristocrați încruntați. Elizabeth Bennet e exact genul de prietenă pe care ți-ai dori-o: deșteaptă, directă și cu replici tăioase. Iar Darcy? Ei bine… la început vrei să-l lovești cu cartea, apoi vrei să te căsătorești cu el. Clasic Austen!",
         {
           "id": 2,
           "userId": 1,
@@ -485,9 +484,9 @@
       "title": "Ion",
       "author": "Liviu Rebreanu",
       "year": 1920,
-      "genre": "roman realist",
+      "genre": "realist",
       "cover": "https://cdn4.libris.ro/img/pozeprod/37366/37365608-1.jpg",
-      "userId": 1,
+      "userId": 3,
       "ratings": [
         5
       ],
@@ -501,6 +500,19 @@
         }
       ],
       "id": 29
+    },
+    {
+      "title": "Harry Potter și piatra filosofală",
+      "author": "J K Rowling",
+      "year": 2001,
+      "genre": "fantasy",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/42441/42440447-1.jpg",
+      "userId": 3,
+      "ratings": [
+        3
+      ],
+      "reviews": [],
+      "id": 30
     }
   ]
 }

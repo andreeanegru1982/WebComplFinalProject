@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { Book } from "./types";
+import type { Book } from "../../utils/types";
 import { BookItem } from "./Item";
 import { Pagination } from "./Pagination";
 import { Link, useSearchParams } from "react-router-dom";

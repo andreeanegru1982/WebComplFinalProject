@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router";
+import { Link, NavLink } from "react-router-dom";
 import type { MouseEvent } from "react";
 import { useAuthContext } from "../Features/Auth/AuthContext";
 
@@ -20,8 +20,8 @@ export function Nav() {
         </h1>
         <menu className={styles.mainMenu}>
           <li><NavLink to="/" className={({ isActive }) => isActive ? styles.active : ""}>Home</NavLink></li>
-          <li><NavLink to="/about" className={({ isActive }) => isActive ? styles.active : ""}>About</NavLink></li>
           <li><NavLink to="books" className={({ isActive }) => isActive ? styles.active : ""}>Books</NavLink></li>
+          <li><NavLink to="/about" className={({ isActive }) => isActive ? styles.active : ""}>About</NavLink></li>
         
         {!user && (
           <>
