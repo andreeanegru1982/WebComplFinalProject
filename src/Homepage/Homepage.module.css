@@ -62,3 +62,23 @@
   color: gold;
   font-size: 1.7rem;
 }
+
+.recomandedLinks a {
+  display: inline-block;
+  margin-right: 1rem;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+
+  & a:hover {
+    color: var(--hover-color);
+  }
+}
+
+.aboutFooter{
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+  opacity: 0.7;
+}
+

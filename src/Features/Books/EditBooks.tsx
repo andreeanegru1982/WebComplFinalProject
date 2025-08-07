@@ -267,7 +267,7 @@ export function EditBooks() {
             setBook({ ...book, reviews: filteredReviews });
             setDefaultValues({ ...defaultValues, review: "" });
           }}
-          className="btn btnWide"
+          className="btn btnCenter btnWide"
         >
           Delete Review
         </button>
