@@ -36,13 +36,13 @@ a {
   color: var(--primary-color);
   text-decoration: none;
   transition: color 0.3s ease;
+}
 
-  &:focus,
-  &:hover {
-    color: var(--hover-color);
-    outline: none;
-    text-decoration: underline;
-  }
+a:focus,
+a:hover {
+  color: var(--hover-color);
+  outline: none;
+  text-decoration: underline;
 }
 
 main {

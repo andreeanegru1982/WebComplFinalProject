@@ -73,12 +73,15 @@ export function EditBooks() {
       });
   }, [id, user]);
 
+  function closePage() {
+    navigate(-1);
+  }
+
   function handleInputChange(
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) {
-    
     const { name, value } = e.target;
 
     setDefaultValues((prev) => ({
@@ -250,32 +253,43 @@ export function EditBooks() {
       </fieldset>
 
       <label htmlFor="review">Review</label>
-      <textarea
-        id="review"
-        name="review"
-        value={defaultValues.review}
-        onChange={handleInputChange}
-      />
-      {defaultValues.review && (
+      <div className="reviewGroup">
+        <textarea
+          id="review"
+          name="review"
+          value={defaultValues.review}
+          onChange={handleInputChange}
+        />
+        {defaultValues.review && (
+          <button
+            type="button"
+            onClick={() => {
+              if (!book) return;
+              const filteredReviews = book.reviews.filter(
+                (r) => r.userId !== user!.id
+              );
+              setBook({ ...book, reviews: filteredReviews });
+              setDefaultValues({ ...defaultValues, review: "" });
+            }}
+            className="btn btnCenter btnWide"
+          >
+            Delete Review
+          </button>
+        )}
+      </div>
+      <div className="btnRow">
         <button
           type="button"
-          onClick={() => {
-            if (!book) return;
-            const filteredReviews = book.reviews.filter(
-              (r) => r.userId !== user!.id
-            );
-            setBook({ ...book, reviews: filteredReviews });
-            setDefaultValues({ ...defaultValues, review: "" });
-          }}
           className="btn btnCenter btnWide"
+          onClick={closePage}
         >
-          Delete Review
+          Cancel
         </button>
-      )}
 
-      <button type="submit" className="btn btnCenter btnWide">
-        Update book
-      </button>
+        <button type="submit" className="btn btnCenter btnWide">
+          Update book
+        </button>
+      </div>
     </form>
   );
 }

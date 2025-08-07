@@ -22,7 +22,7 @@ export function About() {
         <p>
           <strong>Recommendation:</strong>
         </p>
-        <div className={styles.recomandedLinks}>
+        <div className={styles.recommendedLinks}>
           <a href="https://openlibrary.org/" target="_blank" rel="noreferrer">
             Open Library
           </a>

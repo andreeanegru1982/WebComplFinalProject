@@ -104,6 +104,31 @@
   padding: 0 1.5rem; 
 }
 
+.reviewGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.reviewGroup textarea {
+  flex-grow: 1;
+  min-height: 100px;
+  resize: vertical;
+}
+
+.btnRow {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center; 
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btnRow .btn {
+  flex: 0 1 auto;
+}
+
 @media (max-width: 768px) {
   .brandForm {
     display: flex;

@@ -346,13 +346,19 @@
       "year": 1847,
       "genre": "Classic",
       "cover": "https://cdn4.libris.ro/img/pozeprod/11005/11004320-1.jpg",
-      "userId": 4,
+      "userId": 1,
       "ratings": [
-        4,
-        5,
         5
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": 1,
+          "userId": 1,
+          "user": "Andreea",
+          "comment": "Este una din cartile mele preferate.",
+          "date": "2025-08-07"
+        }
+      ]
     },
     {
       "id": 21,
