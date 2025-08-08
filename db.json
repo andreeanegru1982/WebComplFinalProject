@@ -27,6 +27,13 @@
       "firstName": "Călin",
       "lastName": "Negru",
       "id": 4
+    },
+    {
+      "email": "gigel@mail.com",
+      "password": "$2a$10$JmidE3ySxmC5onu3qSefQOURonC5cDEAEHJGH3Stb1iYd2gFcu2Ee",
+      "firstName": "Gigel",
+      "lastName": "Cornel",
+      "id": 5
     }
   ],
   "books": [
@@ -517,7 +524,7 @@
       "id": 30
     },
     {
-      "title": "Ciulendra",
+      "title": "Ciuleandra",
       "author": "Liviu Rebreanu",
       "year": 1927,
       "genre": "roman psihologic",
@@ -526,8 +533,37 @@
       "ratings": [
         5
       ],
-      "reviews": [],
+      "reviews": [
+        {
+          "id": 1,
+          "userId": 1,
+          "user": "Andreea",
+          "comment": "Ciuleandra e o călătorie nebună în sufletul omului prins între pasiune și rațiune. Ritmul intens și dansul cu emoții te țin cu sufletul la gură, iar personajele trăiesc cu o sinceritate brutală. Dacă vrei o poveste care să te facă să simți fiecare bătaie de inimă și să te pierzi în jocul pasiunii, asta e cartea!",
+          "date": "2025-08-08"
+        }
+      ],
       "id": 31
+    },
+    {
+      "title": "Twilight",
+      "author": "Stephenie Meyer",
+      "year": 2005,
+      "genre": "fantasy",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/26702/26701444-1.jpg",
+      "userId": 5,
+      "ratings": [
+        2
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "userId": 5,
+          "user": "Gigel",
+          "comment": "Am intrat în Twilight așteptând o poveste cu vampiri badass și lupii ăia fioroși. În schimb, am dat peste un festival de emoții adolescentine și suspine cât cuprinde. Mă așteptam la o bătălie epică, am primit un maraton de oftaturi. Probabil e o carte bună… dacă ești în căutare de ceva de dormit.",
+          "date": "2025-08-08"
+        }
+      ],
+      "id": 32
     }
   ]
 }

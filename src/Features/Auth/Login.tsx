@@ -33,8 +33,8 @@ export function Login() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const from = location.state?.from || "//";
-  const origin = location.state?.origin || "/";
+  const fromRaw = location.state?.from || "/";
+  const from = typeof fromRaw === "string" && fromRaw.startsWith("/") ? fromRaw : "/";
 
   if (willRedirect) {
     return null;
@@ -77,7 +77,7 @@ export function Login() {
     login(data);
     toast.success("You have been logged in successfully!");
 
-    navigate(from, { replace: true, state: { origin } });
+    navigate(from, { replace: true, state: { origin: location.pathname } });
   }
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {

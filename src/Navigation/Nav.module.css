@@ -41,11 +41,11 @@
   transition: color 0.3s ease;
 }
 
-.active {
-  color: var(--text-inverted);
+.mainMenu li a.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
   text-decoration: none;
 }
-
 .pushRight {
   margin-left: auto;
   color: var(--text-inverted);

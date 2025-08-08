@@ -154,7 +154,7 @@
 }
 
 .addBookBtn {
-  --color: var(--primary-color);
+  color: var(--primary-color) !important;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -163,8 +163,8 @@
   border: none;
   cursor: pointer;
   color: var(--color);
+}
 
-  &:hover {
-    --color: var(--hover-color);
-  }
+.addBookBtn:hover {
+  color: var(--hover-color) !important;
 }

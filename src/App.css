@@ -8,10 +8,6 @@
   --primary-color: #7b5e7a;
   --hover-color: #48234d;
 
-  --secondary-color: #d8a7b1;
-  --danger-color: #cc3333;
-  --success-color: #3c9d5d;
-
   font-size: 62.5%;
 }
 
@@ -40,7 +36,7 @@ a {
 
 a:focus,
 a:hover {
-  color: var(--hover-color);
+  color: var(--primary-color);
   outline: none;
   text-decoration: underline;
 }
