@@ -5,6 +5,7 @@ import type { AuthResponse } from "./types";
 import { validateForm, type ValidationErrors } from "../../utils/validations";
 import { useRedirectWhenLoggedIn } from "./useRedirectWhenLoggedIn";
 import { toast } from "react-toastify";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -29,6 +30,12 @@ export function Login() {
 
   const { login } = useAuthContext();
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from || "//";
+  const origin = location.state?.origin || "/";
+
   if (willRedirect) {
     return null;
   }
@@ -42,7 +49,7 @@ export function Login() {
       Object.fromEntries(formValues.entries()),
       validationSchema
     );
-    // setErrors({...errors, [e.target.name]: null});
+
     setErrors(newErrors);
   }
 
@@ -69,9 +76,11 @@ export function Login() {
 
     login(data);
     toast.success("You have been logged in successfully!");
+
+    navigate(from, { replace: true, state: { origin } });
   }
 
-   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     handleLogin(formData);

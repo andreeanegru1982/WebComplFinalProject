@@ -1,8 +1,8 @@
 import { z } from "zod/v4";
 import { validateForm, type ValidationErrors } from "../../utils/validations";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuthContext } from "../Auth/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const apiUrl = import.meta.env.VITE_API_URL;
@@ -35,7 +35,6 @@ const initialDefaultValues = {
 };
 
 export function AddBooks() {
-  
   const [errors, setErrors] = useState<null | ValidationErrors<
     typeof validationSchema
   >>(null);
@@ -43,10 +42,24 @@ export function AddBooks() {
 
   const { user, accessToken } = useAuthContext();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/login", {
+        replace: true,
+        state: { from: location.pathname, origin: location.pathname },
+      });
+    }
+  }, [user, navigate, location.pathname]);
 
   function closePage() {
-      navigate(-1);
+    if (location.state?.origin) {
+      navigate(location.state.origin, { replace: true });
+    } else {
+      navigate("/", { replace: true });
     }
+  }
 
   function handleInputChange(
     e: React.ChangeEvent<
@@ -79,16 +92,17 @@ export function AddBooks() {
     setErrors(null);
     setDefaultValues(initialDefaultValues);
 
-   const newReview = rawValues.review
-  ? [{
-      id: 1, // sau uuid
-      userId: user!.id,
-      user: user!.firstName,
-      comment: String(rawValues.review),
-      date: new Date().toISOString().slice(0, 10),
-    }]
-  : [];
-
+    const newReview = rawValues.review
+      ? [
+          {
+            id: 1, // sau uuid
+            userId: user!.id,
+            user: user!.firstName,
+            comment: String(rawValues.review),
+            date: new Date().toISOString().slice(0, 10),
+          },
+        ]
+      : [];
 
     const newBookData = {
       title: String(rawValues.title),

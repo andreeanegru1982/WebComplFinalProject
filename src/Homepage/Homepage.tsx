@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import type { Book } from "../utils/types";
 
 import styles from "./Homepage.module.css";
+import { useAuthContext } from "../Features/Auth/AuthContext";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
 export function Homepage() {
   const [books, setBooks] = useState<Book[] | null>(null);
+  const { accessToken } = useAuthContext();
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function getBooks() {
@@ -41,6 +44,14 @@ export function Homepage() {
     return stars;
   }
 
+  function handleAddClick() {
+    if (!accessToken) {
+      navigate("/login", { state: { from: "/books/add" } });
+    } else {
+      navigate("/books/add");
+    }
+  }
+
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
@@ -53,9 +64,9 @@ export function Homepage() {
           <Link to="/books" className="btn btnWide">
             Explore
           </Link>
-          <Link to="/books/add" className="btn btnWide">
+          <button onClick={handleAddClick} className="btn btnWide">
             Add another book
-          </Link>
+          </button>
         </div>
       </section>
 
@@ -79,7 +90,8 @@ export function Homepage() {
                     className={styles.cover}
                   />
                   <div>
-                    <strong>{book.title}</strong>{book.author}
+                    <strong>{book.title}</strong>
+                    {book.author}
                     <div>{renderStars(avgRating)}</div>
                   </div>
                 </li>

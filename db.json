@@ -515,6 +515,19 @@
       ],
       "reviews": [],
       "id": 30
+    },
+    {
+      "title": "Ciulendra",
+      "author": "Liviu Rebreanu",
+      "year": 1927,
+      "genre": "roman psihologic",
+      "cover": "https://cdn4.libris.ro/img/pozeprod/13210/13209932-1.jpg",
+      "userId": 1,
+      "ratings": [
+        5
+      ],
+      "reviews": [],
+      "id": 31
     }
   ]
 }
