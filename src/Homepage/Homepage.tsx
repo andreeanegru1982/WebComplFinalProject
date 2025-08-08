@@ -79,7 +79,7 @@ export function Homepage() {
                     className={styles.cover}
                   />
                   <div>
-                    <strong>{book.title}</strong> de {book.author}
+                    <strong>{book.title}</strong>{book.author}
                     <div>{renderStars(avgRating)}</div>
                   </div>
                 </li>

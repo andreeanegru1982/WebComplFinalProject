@@ -79,7 +79,7 @@ export function Details() {
   return (
     <article className={styles.details}>
       {accessToken && (
-        <div>
+        <div className={styles.topButtons}>
           <Link to="edit" className="btn">
             Edit
           </Link>
@@ -115,22 +115,24 @@ export function Details() {
         </footer>
       </Modal>
 
-      <h1>{book.title}</h1>
-      <div>
-        <p>
-          <strong>Author:</strong> {book.author}
-        </p>
-        <p>
-          <strong>Genre:</strong> {book.genre}
-        </p>
-        <p>
-          <strong>Year:</strong> {book.year}
-        </p>
-        <p>
-          <strong>Rating:</strong> {renderStars(avg)}
-        </p>
+      <div className={styles.detailsGrid}>
+        <img src={book.cover} alt={book.title} style={{ maxWidth: "300px" }} />
+        <div>
+          <h1>{book.title}</h1>
+          <p>
+            <strong>Author:</strong> {book.author}
+          </p>
+          <p>
+            <strong>Genre:</strong> {book.genre}
+          </p>
+          <p>
+            <strong>Year:</strong> {book.year}
+          </p>
+          <p>
+            <strong>Rating:</strong> {renderStars(avg)}
+          </p>
+        </div>
       </div>
-      <img src={book.cover} alt={book.title} style={{ maxWidth: "300px" }} />
 
       <section className={styles.reviews}>
         <h2>Reviews:</h2>

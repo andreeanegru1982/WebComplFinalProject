@@ -44,6 +44,10 @@ export function AddBooks() {
   const { user, accessToken } = useAuthContext();
   const navigate = useNavigate();
 
+  function closePage() {
+      navigate(-1);
+    }
+
   function handleInputChange(
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -198,9 +202,19 @@ export function AddBooks() {
         onChange={handleInputChange}
       />
 
-      <button type="submit" className="btn btnCenter btnWide">
-        Add book
-      </button>
+      <div className="btnRow">
+        <button
+          type="button"
+          className="btn btnCenter btnWide"
+          onClick={closePage}
+        >
+          Cancel
+        </button>
+
+        <button type="submit" className="btn btnCenter btnWide">
+          Add book
+        </button>
+      </div>
     </form>
   );
 }
