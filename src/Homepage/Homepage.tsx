@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import type { Book } from "../utils/types";
+import { FaSearch } from "react-icons/fa";
+import { useAuthContext } from "../Features/Auth/AuthContext";
 
 import styles from "./Homepage.module.css";
-import { useAuthContext } from "../Features/Auth/AuthContext";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
 export function Homepage() {
   const [books, setBooks] = useState<Book[] | null>(null);
+  const [searchTerm, setSearchTerm] = useState("");
   const { accessToken } = useAuthContext();
   const navigate = useNavigate();
 
@@ -52,6 +54,13 @@ export function Homepage() {
     }
   }
 
+  function onSearchSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      navigate(`/search?query=${encodeURIComponent(searchTerm.trim())}`);
+    }
+  }
+
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
@@ -60,6 +69,22 @@ export function Homepage() {
           This is an app dedicated to book lovers. Add, edit, rate and review
           the books you love.
         </p>
+
+        <form onSubmit={onSearchSubmit} className="searchForm">
+          <label htmlFor="searchInput">Search:</label>
+          <input
+            type="text"
+            id="searchInput"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Enter title or author"
+            className="searchInput"
+          />
+          <button type="submit" className="searchBtn">
+            <FaSearch />
+          </button>
+        </form>
+
         <div className={styles.ctaButtons}>
           <Link to="/books" className="btn btnWide">
             Explore

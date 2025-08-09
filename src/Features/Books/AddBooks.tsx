@@ -48,16 +48,17 @@ export function AddBooks() {
     if (!user) {
       navigate("/login", {
         replace: true,
-        state: { from: location.pathname, origin: location.pathname },
+        state: { from: location.pathname, origin: location.state?.origin || "/" }
       });
     }
-  }, [user, navigate, location.pathname]);
+  }, [user, navigate, location.pathname, location.state?.origin])
+  
 
   function closePage() {
     if (location.state?.origin) {
-      navigate(location.state.origin, { replace: true });
+      navigate(location.state.origin, { replace: true});
     } else {
-      navigate("/", { replace: true });
+      navigate("/books", {replace:true});
     }
   }
 

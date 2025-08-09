@@ -10,6 +10,7 @@ import { Details } from "./Features/Books/Detaisl";
 import { AddBooks } from "./Features/Books/AddBooks";
 import { EditBooks } from "./Features/Books/EditBooks";
 import { About } from "./About/About";
+import { HomepageSearch } from "./Homepage/HomepageSearch";
 
 import "./App.css";
 import "./Forms.css"
@@ -22,6 +23,7 @@ export function App() {
       <main>
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/search" element={<HomepageSearch />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={< Register/>} />
           <Route path="books" element={< List/>} />
