@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import type { Book } from "../utils/types";
 
 import styles from "./Homepage.module.css";
@@ -86,16 +86,18 @@ export function HomepageSearch() {
               );
               return (
                 <li key={book.id} className={styles.bookItem}>
-                  <img
-                    src={book.cover}
-                    alt={book.title}
-                    className={styles.cover}
-                  />
-                  <div>
-                    <strong>{book.title}</strong>
-                    <div>{book.author}</div>
-                    <div>{renderStars(avgRating)}</div>
-                  </div>
+                  <Link to={`/books/${book.id}`}>
+                    <img
+                      src={book.cover}
+                      alt={book.title}
+                      className={styles.cover}
+                    />
+                    <div>
+                      <strong>{book.title}</strong>
+                      <div>{book.author}</div>
+                      <div>{renderStars(avgRating)}</div>
+                    </div>
+                  </Link>
                 </li>
               );
             })}

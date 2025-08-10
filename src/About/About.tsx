@@ -33,7 +33,7 @@ export function About() {
       </div>
       <footer className={styles.aboutFooter}>
         <p>
-          *This app is built as a personal project and is not affiliated with
+          *This app is built as a personal project combining my passion for books and now coding and is not affiliated with
           the external services linked above.
         </p>
       </footer>

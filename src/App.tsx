@@ -11,6 +11,7 @@ import { AddBooks } from "./Features/Books/AddBooks";
 import { EditBooks } from "./Features/Books/EditBooks";
 import { About } from "./About/About";
 import { HomepageSearch } from "./Homepage/HomepageSearch";
+import { ProfileEdit } from "./Features/Auth/ProfileEdit";
 
 import "./App.css";
 import "./Forms.css"
@@ -26,6 +27,7 @@ export function App() {
           <Route path="/search" element={<HomepageSearch />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={< Register/>} />
+          <Route path="profile" element={< ProfileEdit/>} />
           <Route path="books" element={< List/>} />
           <Route path="books/:id" element={< Details/>} />
           <Route path="books/:id/edit" element={< EditBooks/>} />

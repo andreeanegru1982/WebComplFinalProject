@@ -33,8 +33,10 @@ export function Nav() {
         {user && (
           <li className={styles.pushRight}>
             Welcome, {user.firstName}!{' '}
-            <a href="/" onClick={handleLogout}>Logout</a>
+            <a href="/" onClick={handleLogout}>Logout</a>{'    '}
+            <NavLink to="profile">Profile</NavLink>
           </li>
+          
         )}
         
         </menu>
